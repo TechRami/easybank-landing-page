@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+:root{
+
+    /* font family */
+    --public-sans: 'Public Sans', sans-serif;
+
+    /* fonts size */
+    --semi-sm-fs: 12px;
+    --sm-fs: 18px;
+    --semi-md-fs: 21px;
+    --md-fs: 32px;
+    --lg-fs: 64px;
+
+    /* font weight */
+    --sm-fw: 300;
+    --md-fw: 400;
+    --lg-fw: 700;
+
+
+    /* Primary Colors */
+    --dark-blue: hsl(233, 26%, 24%);
+    --lime-green: hsl(136, 65%, 51%);
+    --bright-cyan: hsl(192, 70%, 51%);
+
+    /* Neutral */
+
+    --grayish-blue: hsl(233, 8%, 62%);
+    --light-grayish-blue: hsl(220, 16%, 96%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+
+
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--public-sans);
+}
+
+.w-100 {
+    max-width: 1920px;
+}
+
+.w-80 {
+    max-width: 1600px;
+}
+
+/* .mobile-view {
+    text-align: center;
+} */
+
+
+
+/* ----------------- */
+
+/* navbar styling */
+
+nav{
+    background: var(--white)
+}
+
+.nav-link {
+    color: var(--grayish-blue);
+    border-bottom: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+    color: var(--dark-blue);
+    border-color: var(--bright-cyan);
+}
+
+
+.inv-btn {
+    border: none;
+    border-radius: 25px;
+    padding: 10px 30px;
+    background-image: linear-gradient(90deg, var(--lime-green), var(--bright-cyan));
+    color: var(--white);
+    font-weight: var(--md-fw);
+    text-transform: capitalize;
+    transition: opacity 0.4s ease;
+}
+
+.inv-btn:hover {
+    opacity: 0.7;   
+}
+
+
+
+/* Section A styling */
+
+#section-a {
+    background-image: url('/dist/images/bg-intro-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 210px 0;
+    background-position: 140% 60%;
+    background-size: 65vw 130%;
+    position: relative;
+    left: 0;
+    bottom: 0;
+}
+
+#section-a::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url('/dist/images/image-mockups.png');
+    display:block;
+    background-repeat: no-repeat;
+    content: '';
+    height: 910px;
+    width: 640px;
+}
+
+#section-a h1 {
+    font-size: var(--lg-fs);
+    font-weight: var(--sm-fw);
+    color: var(--dark-blue);
+}
+
+#section-a p {
+    font-size: var(--sm-fs);
+    font-weight: var(--md-fw);
+    color: var(--grayish-blue);
+    width: 35%;
+}
+
+
+
+
+
+/* Section B | Why choose easy bank */
+
+#section-b {
+    padding: 150px 0 150px 0;
+}
+
+#section-b h1{
+    color: var(--dark-blue);
+}
+
+#section-b p{
+    color: var(--grayish-blue);
+    font-size: var(--sm-fs);
+    font-weight: var(--md-fw);
+}
+
+
+
+
+/* Section C | Latest Articles */
+
+#section-c {
+    padding: 150px 0 150px 0;
+}
+
+
+.copyright-text {
+    font-size: var(--semi-sm-fs);
+    color: var(--grayish-blue);
+}
+
+.card {
+    border: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.card-text {
+    color: var(--grayish-blue);
+}
+
+.card-title {
+    font-size: var(--semi-md-fs);
+    transition: color 0.4s ease;
+    cursor: pointer;
+}
+
+.card-title:hover {
+    color: var(--bright-cyan);
+}
+
+.card-img-top {
+    max-height: 250px;
+}
+
+
+/* Section D | Footer */
+
+#section-d {
+    background-color: var(--dark-blue);
+    padding: 150px 0 150px 0;
+}
+
+
+.footer-btn {
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-hrefs {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-hrefs a{
+    color: var(--light-grayish-blue);
+    text-decoration: none;
+    margin-top: 10px;
+    transition: color 0.4s ease-in-out;
+}
+
+.footer-hrefs a:hover{
+    color: var(--bright-cyan);
+}
+
+
+.copyright-p {
+    display: flex;
+    color: var(--grayish-blue);
+    justify-content: flex-end;
+}
+
+
+.socials svg {
+    margin: 5px;
+    transition: fill 0.4s ease-in-out;
+    fill: var(--white);
+    cursor: pointer;
+}
+
+.socials svg:hover {
+    fill: var(--bright-cyan);
+}
+
+
+
+
+/* media queries */
+
+@media only screen and (max-width: 1168px){
+    #section-a {
+        background-size: 70vw 130%;
+    }
+
+    #section-a::after {
+    
+        background-image: url('/dist/images/image-mockups.png');
+        background-size: 85% 80%;
+        background-position: 200% 60%;
+        height: 910px;
+        width: 640px;
+    }
+}
+
+
+ @media only screen and (max-width: 991px){
+    #section-a {
+        background-image: url('/dist/images/bg-intro-mobile.svg');
+        background-size: 100% 60%;
+        background-position: top;
+    }
+
+    #section-a::after {
+        background-image: url('/dist/images/image-mockups.png');
+        background-size: 50%;
+        background-position: top;
+        height: 100%;
+        width: 100%;
+    }
+
+    .section-a-text {
+        display: grid;
+        place-items: center;
+        padding-top: 400px;
+    }
+}
+
+ @media only screen and (max-width: 730px){
+
+    #section-a::after {
+        background-image: url('/dist/images/image-mockups.png');
+        background-size: 55%;
+        background-position: 50% 15%;
+        height: 100%;
+        width: 100%;
+    }
+    
+}
+ @media only screen and (max-width: 554px){
+    #section-a {
+        background-image: url('/dist/images/bg-intro-mobile.svg');
+        background-size: 100% 60%;
+        background-position: top;
+    }
+
+    #section-a::after {
+        background-image: url('/dist/images/image-mockups.png');
+        background-size: 70%;
+        background-position: 50% 15%;
+        height: 100%;
+        width: 100%;
+    }
+
+    .section-a-text {
+        display: grid;
+        place-items: center;
+        padding-top: 400px;
+    }
+
+    #section-a h1 {
+        font-size: var(--md-fs);
+    }
+
+    #section-a p {
+        width: 100%;
+        text-align: center;
+    }
+    
+}
+
+
+ @media only screen and (max-width: 428px){
+    #section-a {
+        background-image: url('/dist/images/bg-intro-mobile.svg');
+        background-size: 100% 50%;
+        background-position: top;
+    }
+
+    #section-a::after {
+        background-image: url('/dist/images/image-mockups.png');
+        background-size: 70%;
+        background-position: 50% 15%;
+        height: 100%;
+        width: 100%;
+    }
+
+    .section-a-text {
+        display: grid;
+        place-items: center;
+        padding-top: 300px;
+    }
+    
+}
+
+
+ @media only screen and (max-width: 320px){
+    #section-a {
+        background-image: url('/dist/images/bg-intro-mobile.svg');
+        background-size: 100% 40%;
+        background-position: top;
+    }
+
+    #section-a::after {
+        background-image: url('/dist/images/image-mockups.png');
+        background-size: 70%;
+        background-position: 50% 15%;
+        height: 100%;
+        width: 100%;
+    }
+
+    .section-a-text {
+        display: grid;
+        place-items: center;
+        padding-top: 200px;
+    }
+    
+}
+
+
+
+
+
+
+/* @media only screen and (max-width: 1412px){
+    #section-a {
+        background-position: 200% 60%;
+        background-size: 1050px 1000px;
+    }
+}
+
+@media only screen and (max-width: 1248px){
+    #section-a {
+        background-position: 200% 60%;
+        background-size: 950px 950px;
+    }
+}
+
+@media only screen and (max-width: 1152px){
+    #section-a {
+        background-position: 200% 60%;
+        background-size: 850px 950px;
+    }
+}
+
+@media only screen and (max-width: 1058px){
+    #section-a {
+        background-position: 200% 60%;
+        background-size: 780px 850px;
+    }
+}
+
+@media only screen and (max-width: 990px){
+    #section-a {
+        background-image: url('/dist/images/bg-intro-mobile.svg');
+        background-size: 1000px 850px;
+        background-position: center;
+    }
+    #section-a::after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-image: url('/dist/images/image-mockups.png');
+        background-size: 600px 760px;
+        height: 760px;
+        background-position: center;
+        display:block;
+        background-repeat: no-repeat;
+        content: '';
+        width: 100%;
+    }
+    .section-a-text {
+        margin: 0 auto;
+    }
+}  */
