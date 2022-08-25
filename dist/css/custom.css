@@ -76,6 +76,37 @@ nav{
     border-color: var(--bright-cyan);
 }
 
+.menu-btn{
+    display: flex;
+    flex-direction: column;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar-toggler:focus{
+	box-shadow: none !important;
+}
+
+ .line{
+    width: 34px;
+    height: 2px;
+    background-color: var(--grayish-blue);
+    margin-block: 5px;
+    transition: transform .5s, opacity .25s;
+}
+
+.menu-btn.active .line:nth-child(1){
+    transform: translateY(13px) rotate(45deg);
+}
+.menu-btn.active .line:nth-child(2){
+    opacity: 0;
+}
+.menu-btn.active .line:nth-child(3){
+    transform: translateY(-13px) rotate(-45deg);
+}
+
 
 .inv-btn {
     border: none;
